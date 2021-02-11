@@ -17,18 +17,22 @@
   <!-- https://v3.vuejs.org/guide/installation.html#release-notes -->
   <!-- Vue CDN -->
   <script src="https://unpkg.com/vue@next"></script>
+</head>
 
-  <div id="app" class="bg-gray-50 h-screen pt-5 px-auto"> 
+  <div id="app" class="bg-gray-50 h-screen w-screen pt-10  px-28"> 
       <h1 class="text-5xl font-bold">My Photo Gallery ( {{photos.length}} ), You liked ( {{countLike}} )</h1>
-       <div class="py-5" v-for="(photo,index) in photos">
-         <img :src="photo.url" class="w-1/12 h-1/12 inline" v-on:click="toggleLike(index)"> 
+       <div class="py-5 pl-10" v-for="(photo,index) in photos">
+        <div class="bg-gray-100 w-10/12">
+         <img :src="photo.url" class="h-1/12 w-3/12 inline" v-on:click="toggleLike(index)"> 
          <span class="ml-3 text-xl font-semibold">{{photo.title}} 
-           <span v-show="photo.liked" class="material-icons text-pink-600">favorite</span> 
-          </span>
+            <span v-show="photo.liked" class="material-icons text-pink-600">favorite</span> 
+          </span> 
+        </div>
+        </div>
        </div>
   </div>
   <!-- my main.js -->
-  <script src="./main.js"></script>
+  <script src="main.js"></script>
 </body>
 
 </html>

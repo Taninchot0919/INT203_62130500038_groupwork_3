@@ -5,16 +5,19 @@ const app = {
         {
           url: "images/pineapple.jpg",
           title: "Pineapple",
+          description:"This is the picture of Pineapple",
           liked:false
         },
         {
           url: "images/lion.jpg",
           title: "Lion",
+          description:"This is the picture of Lion",
           liked:false
         },
         {
           url: "images/surface.jpg",
-          title: "Surface",
+          title: "Microsoft Surface",
+          description:"This is the picture of Microsoft Surface",
           liked:false
         },
       ],
