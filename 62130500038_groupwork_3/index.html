@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Photo Gallery</title>
+
+  <!-- https://google.github.io/material-design-icons/#icon-font-for-the-web -->
+  <!-- Using via Google Web Fonts -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+  <!-- https://tailwindcss.com/docs/installation -->
+  <!-- Using Tailwind via CDN -->
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+
+  <!-- https://v3.vuejs.org/guide/installation.html#release-notes -->
+  <!-- Vue CDN -->
+  <script src="https://unpkg.com/vue@next"></script>
+
+  <div id="app" class="bg-gray-50 h-screen pt-5 px-auto"> 
+      <h1 class="text-5xl font-bold">My Photo Gallery ( {{photos.length}} ), You liked ( {{countLike}} )</h1>
+       <div class="py-5" v-for="(photo,index) in photos">
+         <img :src="photo.url" class="w-1/12 h-1/12 inline" v-on:click="toggleLike(index)"> 
+         <span class="ml-3 text-xl font-semibold">{{photo.title}} 
+           <span v-show="photo.liked" class="material-icons text-pink-600">favorite</span> 
+          </span>
+       </div>
+  </div>
+  <!-- my main.js -->
+  <script src="./main.js"></script>
+</body>
+
+</html>
